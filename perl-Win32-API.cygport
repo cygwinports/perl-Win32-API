@@ -1,0 +1,18 @@
+CPAN_AUTHOR=bulkdd
+inherit perl
+
+NAME="perl-Win32-API"
+VERSION=0.82
+RELEASE=1
+CATEGORY="Perl"
+SUMMARY="Perl Win32::API distribution"
+DESCRIPTION="With this module you can import and call arbitrary functions
+from Win32 DLLs, without having to write an XS extension for each."
+HOMEPAGE="http://search.cpan.org/dist/Win32-API/"
+SRC_URI="mirror://cpan/authors/id/B/BU/BULKDD/Win32/Win32-API-${VERSION}.tar.gz"
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	# fails if case sensitivity is on
+	rename TYPEMAP typemap $(find -name TYPEMAP)
+}
