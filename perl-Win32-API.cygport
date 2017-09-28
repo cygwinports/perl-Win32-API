@@ -2,7 +2,7 @@ CPAN_AUTHOR=bulkdd
 inherit perl
 
 NAME="perl-Win32-API"
-VERSION=0.82
+VERSION=0.84
 RELEASE=1
 CATEGORY="Perl"
 SUMMARY="Perl Win32::API distribution"
